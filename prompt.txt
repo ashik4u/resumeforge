@@ -1,0 +1,548 @@
+# ResumeForge – Product Requirements Document (PRD)
+
+You are a senior software engineer and technical architect.
+
+Your goal is to build a production-quality, open-source web application called **ResumeForge**.
+
+ResumeForge is inspired by RenderCV but is not a clone. It should be more modern, modular, extensible, and developer-friendly.
+
+## General Requirements
+
+* Build incrementally.
+* Keep the project always runnable.
+* Never leave broken code.
+* After every milestone, ensure:
+
+  * TypeScript compiles.
+  * ESLint passes.
+  * No runtime errors.
+  * Production build succeeds.
+* Use clean architecture and SOLID principles.
+* Prefer composition over inheritance.
+* Write maintainable, documented code.
+* Use strict TypeScript.
+* No `any` unless absolutely necessary.
+
+---
+
+# Tech Stack
+
+Framework:
+
+* Next.js 15+ (App Router)
+
+Language:
+
+* TypeScript
+
+Styling:
+
+* Tailwind CSS v4
+
+Component Library:
+
+* shadcn/ui
+* Radix UI
+
+Icons:
+
+* Lucide React
+
+Editor:
+
+* Monaco Editor
+
+State:
+
+* Zustand
+
+Validation:
+
+* Zod
+
+YAML:
+
+* yaml package
+
+Animation:
+
+* Framer Motion
+
+Forms:
+
+* React Hook Form
+
+Theme:
+
+* next-themes
+
+Panels:
+
+* react-resizable-panels
+
+PDF Export:
+
+* Playwright (preferred)
+* React PDF (only if necessary)
+
+Package Manager:
+
+* npm
+
+---
+
+# Folder Structure
+
+src/
+
+app/
+
+components/
+ui/
+layout/
+
+features/
+editor/
+preview/
+resume/
+export/
+settings/
+
+store/
+
+lib/
+parser/
+schema/
+renderer/
+utils/
+
+templates/
+ats/
+modern/
+executive/
+harvard/
+minimal/
+
+styles/
+
+types/
+
+public/
+
+---
+
+# Application Layout
+
+Top Navigation
+
+---
+
+ResumeForge
+
+Theme Selector
+
+Template Selector
+
+Export Button
+
+---
+
+Resizable Layout
+
+---
+
+YAML Editor
+
+Live Preview
+
+---
+
+Status Bar
+
+---
+
+Ready
+
+YAML Valid
+
+Auto Saved
+
+Page Number
+
+---
+
+---
+
+# Editing Modes
+
+The application must support three editing modes:
+
+1. YAML Editor
+
+2. Visual Form Builder
+
+3. AI Chat Editor
+
+All three edit the same resume state.
+
+---
+
+# Resume Schema
+
+Support:
+
+basics
+
+summary
+
+experience
+
+projects
+
+education
+
+skills
+
+languages
+
+certifications
+
+awards
+
+publications
+
+references
+
+core_competencies
+
+memberships
+
+Each section must have a Zod schema.
+
+---
+
+# Resume Templates
+
+Implement:
+
+ATS
+
+Modern
+
+Minimal
+
+Executive
+
+Harvard
+
+Each template must be independent.
+
+---
+
+# YAML Engine
+
+Features:
+
+Live Parsing
+
+Live Validation
+
+Auto Formatting
+
+Error Highlighting
+
+Schema Validation
+
+Auto Completion (later)
+
+---
+
+# Preview Engine
+
+Live rendering.
+
+Every YAML change updates the preview immediately.
+
+Support:
+
+Multi-page
+
+Zoom
+
+Print Preview
+
+Theme Switching
+
+---
+
+# PDF Export
+
+One-click PDF export.
+
+Requirements:
+
+Pixel-perfect layout
+
+Page breaks
+
+Embedded fonts
+
+No clipping
+
+Works offline
+
+---
+
+# Resume Components
+
+Header
+
+Summary
+
+Experience
+
+Projects
+
+Education
+
+Skills
+
+Languages
+
+Certifications
+
+Awards
+
+References
+
+Each component should be reusable.
+
+---
+
+# Features
+
+Dark Mode
+
+Autosave
+
+Undo / Redo
+
+Import YAML
+
+Export YAML
+
+Import JSON Resume
+
+Export JSON Resume
+
+Drag-and-drop section ordering
+
+Version history
+
+Theme customization
+
+Color picker
+
+Font picker
+
+Spacing controls
+
+---
+
+# AI Features
+
+Resume improvement
+
+Bullet rewriting
+
+ATS keyword suggestions
+
+Grammar correction
+
+Cover letter generation
+
+Resume scoring
+
+Interview preparation
+
+Do not implement AI until the editor is complete.
+
+---
+
+# Coding Standards
+
+Use functional components only.
+
+No duplicated code.
+
+Extract reusable hooks.
+
+Prefer server components where appropriate.
+
+Use client components only when required.
+
+Keep business logic outside UI.
+
+Prefer small reusable components.
+
+Never mix parser logic into UI.
+
+Never mix renderer logic into store.
+
+---
+
+# State Architecture
+
+Single source of truth.
+
+YAML
+
+↓
+
+Parser
+
+↓
+
+Validated Resume Object
+
+↓
+
+Renderer
+
+↓
+
+Preview
+
+Avoid duplicated state.
+
+---
+
+# UI Style
+
+Inspired by:
+
+VS Code
+
+Notion
+
+Linear
+
+GitHub
+
+RenderCV
+
+Use:
+
+Rounded corners
+
+Subtle shadows
+
+Minimal borders
+
+Professional typography
+
+Responsive design
+
+---
+
+# Milestones
+
+Milestone 1
+
+Project setup
+
+Folder structure
+
+Theme
+
+Navbar
+
+Workspace
+
+Status bar
+
+Milestone 2
+
+Monaco editor
+
+YAML parser
+
+Zod schema
+
+Resume store
+
+Live preview
+
+Milestone 3
+
+Resume renderer
+
+Header
+
+Summary
+
+Experience
+
+Projects
+
+Milestone 4
+
+Remaining resume sections
+
+Milestone 5
+
+Multiple templates
+
+Milestone 6
+
+PDF export
+
+Milestone 7
+
+Visual form editor
+
+Milestone 8
+
+AI features
+
+Milestone 9
+
+Import/export
+
+Milestone 10
+
+Documentation
+
+Deployment
+
+Docker
+
+GitHub Actions
+
+---
+
+# Rules
+
+Never generate placeholder code if a real implementation is feasible.
+
+Always refactor instead of duplicating.
+
+Keep components under ~200 lines where practical.
+
+Use meaningful names.
+
+Document exported functions.
+
+After each milestone:
+
+Run lint.
+
+Run typecheck.
+
+Run production build.
+
+Fix every issue before continuing.
+
+If a better architecture becomes apparent, explain the tradeoffs and refactor only if it improves maintainability without breaking completed features.
+
+Act as the lead engineer for this project. Build ResumeForge as a polished, production-ready application suitable for open-source release.
