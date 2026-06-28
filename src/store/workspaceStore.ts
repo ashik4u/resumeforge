@@ -8,6 +8,6 @@ interface WorkspaceStore {
 }
 
 export const useWorkspaceStore = create<WorkspaceStore>((set) => ({
-  editingMode: "yaml",
+  editingMode: "visual",
   setEditingMode: (editingMode) => set({ editingMode }),
 }));
