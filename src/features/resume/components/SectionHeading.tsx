@@ -4,7 +4,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({ children }: SectionHeadingProps) {
   return (
-    <h2 className="text-sm font-semibold uppercase tracking-normal text-slate-500">
+    <h2 className="border-b border-slate-300 pb-1 text-base font-bold tracking-normal text-slate-800">
       {children}
     </h2>
   );

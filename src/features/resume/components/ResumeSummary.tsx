@@ -10,9 +10,9 @@ export function ResumeSummary({ summary }: ResumeSummaryProps) {
   }
 
   return (
-    <section className="mt-8">
-      <SectionHeading>Summary</SectionHeading>
-      <p className="mt-3 leading-7">{summary}</p>
+    <section className="mt-6">
+      <SectionHeading>Career Summary</SectionHeading>
+      <p className="mt-2 leading-6 text-justify">{summary}</p>
     </section>
   );
 }

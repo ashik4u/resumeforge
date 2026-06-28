@@ -11,17 +11,17 @@ export function ResumeProjects({ projects }: ResumeProjectsProps) {
   }
 
   return (
-    <section>
+    <section className="mt-6">
       <SectionHeading>Projects</SectionHeading>
-      <div className="mt-4 space-y-4">
+      <div className="mt-3 space-y-4">
         {projects.map((project) => (
           <article key={project.title}>
-            <h3 className="font-semibold">{project.title}</h3>
+            <h3 className="font-semibold text-slate-800">{project.title}</h3>
             <p className="text-sm text-slate-600">
               {[project.role, project.client].filter(Boolean).join(" · ")}
             </p>
             {project.highlights.length > 0 ? (
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">
+              <ul className="mt-1 list-disc space-y-0.5 pl-5 text-sm leading-5">
                 {project.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}

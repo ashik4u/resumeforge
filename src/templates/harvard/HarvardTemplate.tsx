@@ -13,27 +13,34 @@ import { ResumeSummary } from "@/features/resume/components/ResumeSummary";
 import type { TemplateProps } from "@/templates/types";
 
 export function HarvardTemplate({ resume }: TemplateProps) {
+  const contactItems = [
+    resume.basics.location.city && resume.basics.location.country
+      ? `${resume.basics.location.city}, ${resume.basics.location.country}`
+      : null,
+    resume.basics.email,
+    resume.basics.phone,
+    resume.basics.website,
+  ]
+    .filter(Boolean)
+    .join(" • ");
+
   return (
     <article className="mx-auto min-h-[11in] w-full max-w-[8.5in] bg-white p-12 font-serif shadow-sm">
       <header className="text-center">
         <h1 className="text-3xl font-bold tracking-normal">
           {resume.basics.name}
         </h1>
-        <p className="mt-2 text-sm text-slate-700">{resume.basics.headline}</p>
-        <p className="mt-2 text-xs text-slate-600">
-          {[resume.basics.email, resume.basics.phone, resume.basics.website]
-            .filter(Boolean)
-            .join(" | ")}
-        </p>
+        <p className="mt-1 text-sm text-slate-700">{resume.basics.headline}</p>
+        <p className="mt-1 text-xs text-slate-600">{contactItems}</p>
       </header>
 
-      <div className="mt-6 border-t border-slate-300" />
+      <div className="mt-4 border-t border-slate-300" />
       <ResumeSummary summary={resume.summary} />
       <ResumeEducation education={resume.education} />
       <ResumeExperience experience={resume.experience} />
       <ResumeProjects projects={resume.projects} />
 
-      <section className="mt-8 grid gap-8 md:grid-cols-2">
+      <section className="mt-6 grid gap-6 md:grid-cols-2">
         <ResumeSkills skills={resume.skills} />
         <ResumeCoreCompetencies competencies={resume.core_competencies} />
         <ResumeCertifications certifications={resume.certifications} />

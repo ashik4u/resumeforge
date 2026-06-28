@@ -11,19 +11,19 @@ export function ResumeEducation({ education }: ResumeEducationProps) {
   }
 
   return (
-    <section>
+    <section className="mt-6">
       <SectionHeading>Education</SectionHeading>
-      <div className="mt-4 space-y-4">
+      <div className="mt-3 space-y-3">
         {education.map((item) => (
           <article key={`${item.institution}-${item.degree}`}>
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="font-semibold">{item.institution}</h3>
+                <h3 className="font-semibold text-slate-800">{item.institution}</h3>
                 <p className="text-sm text-slate-600">
                   {item.degree}, {item.area}
                 </p>
               </div>
-              <p className="shrink-0 text-sm text-slate-500">
+              <p className="shrink-0 text-sm text-slate-600">
                 {item.startDate} - {item.endDate}
               </p>
             </div>

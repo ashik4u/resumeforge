@@ -11,13 +11,13 @@ export function ResumeSkills({ skills }: ResumeSkillsProps) {
   }
 
   return (
-    <section>
+    <section className="mt-6">
       <SectionHeading>Skills</SectionHeading>
-      <div className="mt-4 space-y-3 text-sm">
+      <div className="mt-3 space-y-2 text-sm">
         {skills.map((skill) => (
           <div key={skill.category}>
-            <h3 className="font-semibold">{skill.category}</h3>
-            <p className="mt-1 leading-6 text-slate-600">
+            <h3 className="font-semibold text-slate-800">{skill.category}</h3>
+            <p className="text-slate-600">
               {skill.items.join(", ")}
             </p>
           </div>
