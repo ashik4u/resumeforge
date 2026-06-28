@@ -8,6 +8,6 @@ interface TemplateStore {
 }
 
 export const useTemplateStore = create<TemplateStore>((set) => ({
-  templateId: "modern",
+  templateId: "harvard",
   setTemplateId: (templateId) => set({ templateId }),
 }));

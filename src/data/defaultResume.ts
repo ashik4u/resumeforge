@@ -101,17 +101,17 @@ design:
     show_footer: false
     show_top_note: false
   colors:
-    body: "#222222"
-    name: "#003D7A"
-    headline: "#003D7A"
-    connections: "#1a1a1a"
-    section_titles: "#003D7A"
-    links: "#0066CC"
-    footer: "#666666"
-    top_note: "#666666"
+    body: "#1a1a1a"
+    name: "#000000"
+    headline: "#4b5563"
+    connections: "#4b5563"
+    section_titles: "#1a1a1a"
+    links: "#000000"
+    footer: "#6b7280"
+    top_note: "#6b7280"
   typography:
-    line_spacing: "1.2"
+    line_spacing: "1.35"
     alignment: left
     date_and_location_column_alignment: right
-    font_family: Calibri
+    font_family: "Georgia"
 `;
