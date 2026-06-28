@@ -98,20 +98,31 @@ design:
     bottom_margin: 0.5in
     left_margin: 0.5in
     right_margin: 0.5in
-    show_footer: false
+    show_footer: true
     show_top_note: false
   colors:
-    body: "#1a1a1a"
+    body: "#000000"
     name: "#000000"
-    headline: "#4b5563"
-    connections: "#4b5563"
-    section_titles: "#1a1a1a"
+    headline: "#000000"
+    connections: "#000000"
+    section_titles: "#000000"
     links: "#000000"
-    footer: "#6b7280"
-    top_note: "#6b7280"
+    footer: "#666666"
+    top_note: "#666666"
   typography:
-    line_spacing: "1.35"
-    alignment: left
+    line_spacing: "1.3"
+    alignment: justified
     date_and_location_column_alignment: right
-    font_family: "Georgia"
+    font_family: "Times New Roman"
+
+personal_information:
+  legal_name: Maya Rahman
+  fathers_name: Rahman Sr.
+  mothers_name: Fatima Rahman
+  date_of_birth: "1990-01-15"
+  gender: Female
+  marital_status: Single
+  nationality: Bangladeshi
+  religion: Islam
+  blood_group: "O+"
 `;

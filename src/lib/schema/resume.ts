@@ -147,6 +147,18 @@ export const MembershipSchema = z.object({
   endDate: ResumeTextSchema.optional(),
 });
 
+export const PersonalInformationSchema = z.object({
+  legal_name: ResumeTextSchema.optional(),
+  fathers_name: ResumeTextSchema.optional(),
+  mothers_name: ResumeTextSchema.optional(),
+  date_of_birth: ResumeTextSchema.optional(),
+  gender: ResumeTextSchema.optional(),
+  marital_status: ResumeTextSchema.optional(),
+  nationality: ResumeTextSchema.optional(),
+  religion: ResumeTextSchema.optional(),
+  blood_group: ResumeTextSchema.optional(),
+});
+
 export const ResumeSchema = z.object({
   design: DesignSchema.default(DefaultDesign),
   basics: BasicsSchema,
@@ -162,6 +174,7 @@ export const ResumeSchema = z.object({
   references: z.array(ReferenceSchema).default([]),
   core_competencies: z.array(ResumeTextSchema).default([]),
   memberships: z.array(MembershipSchema).default([]),
+  personal_information: PersonalInformationSchema.optional(),
 });
 
 export type Resume = z.infer<typeof ResumeSchema>;
