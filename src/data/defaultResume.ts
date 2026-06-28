@@ -94,24 +94,24 @@ memberships:
 design:
   page:
     size: a4
-    top_margin: 0.7in
-    bottom_margin: 0.7in
-    left_margin: 0.7in
-    right_margin: 0.7in
-    show_footer: true
+    top_margin: 0.5in
+    bottom_margin: 0.5in
+    left_margin: 0.5in
+    right_margin: 0.5in
+    show_footer: false
     show_top_note: false
   colors:
-    body: "#0f172a"
-    name: "#0f172a"
-    headline: "#475569"
-    connections: "#64748b"
-    section_titles: "#475569"
-    links: "#0f172a"
-    footer: "#64748b"
-    top_note: "#64748b"
+    body: "#222222"
+    name: "#003D7A"
+    headline: "#003D7A"
+    connections: "#1a1a1a"
+    section_titles: "#003D7A"
+    links: "#0066CC"
+    footer: "#666666"
+    top_note: "#666666"
   typography:
-    line_spacing: "1.55"
+    line_spacing: "1.2"
     alignment: left
     date_and_location_column_alignment: right
-    font_family: Arial
+    font_family: Calibri
 `;
